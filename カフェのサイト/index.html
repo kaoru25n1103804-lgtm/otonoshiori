@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音の栞-公式webサイト</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <header class="main-header">
+            <a href="index.html" class="logo-link">
+                <span class="logo">音の栞</span>
+            </a>
+            <nav class="header-nav">
+                <a href="#music-list-anchor">音楽</a>
+                <a href="#book-list-anchor">本</a>
+            </nav>
+        </header>
+    </div>
+
+    <section class="coffee-section">
+        <h2>ターキッシュコーヒー</h2>
+        <img src="images/dri0004-001.png" alt="コーヒー" class="coffee-image">
+        <p class="coffee-text">▶︎当店自慢のターキッシュコーヒーです。</p>
+        <p>杓型の抽出器具を使い、細挽きにした</p>
+        <p>コーヒーを煮出しました。</p>
+        <p>粉を濾さずに上澄みをすすって飲むため、</p>
+        <p>舌のうえにざらっとした印象が残ります。</p>
+    </section>
+
+    
+    <section class="horizontal-scroll-section">
+        <div id="music-list-anchor" style="scroll-margin-top: 80px;"></div>
+        <h2 class="section-title">おすすめの音楽</h2>
+        <div class="volume-control" style="margin-left: 10%; margin-bottom: 20px; color: white; display: flex; align-items: center; gap: 10px;">
+        <span style="font-size: 0.8rem;">Volume</span>
+        <input type="range" id="volume-slider" min="0" max="100" value="50" oninput="changeVolume(this.value)" style="cursor: pointer; accent-color: #32c32f;">
+    </div>
+        <div class="slider-wrapper">
+            <button class="nav-btn prev" onclick="sideScroll('music-list', -1)">＜</button>        
+            <div class="scroll-container" id="music-list">
+                <div class="scroll-spacer"></div>
+
+                <div class="item-card">
+                    <div class="image-wrapper">
+                        <img src="images/jacket1.jpg" alt="メトロノーム">
+                        <div class="play-button" onclick="toggleMusic('Qa9PkDZkyHg', this)">▶</div>
+                    </div>
+                    <p class="item-name">メトロノーム</p>
+                    <p class="item-sub">米津玄師</p>
+                </div>
+
+                <div class="item-card">
+                    <div class="image-wrapper">
+                        <img src="images/jacket3.jpg" alt="アイネクライネ">
+                        <div class="play-button" onclick="toggleMusic('-EKxzId_Sj4', this)">▶</div>
+                    </div>
+                    <p class="item-name">アイネクライネ</p>
+                    <p class="item-sub">米津玄師</p>
+                </div>
+
+                <div class="item-card">
+                    <div class="image-wrapper">
+                        <img src="images/jacket2.jpg" alt="奏">
+                        <div class="play-button" onclick="toggleMusic('J5Z7tIq7bco', this)">▶</div>
+                    </div>
+                    <p class="item-name">奏</p>
+                    <p class="item-sub">スキマスイッチ</p>
+                </div>
+
+                <div class="item-card">
+                    <div class="image-wrapper">
+                        <img src="images/jacket4.jpg" alt="いきのこりぼくら">
+                        <div class="play-button" onclick="toggleMusic('byvta9LHo2o', this)">▶</div>
+                    </div>
+                    <p class="item-name">いきのこりぼくら</p>
+                    <p class="item-sub">青葉市子</p>
+                </div>
+
+                <div class="item-card">
+                    <div class="image-wrapper">
+                        <img src="images/jacket5.jpeg" alt="あくび">
+                        <div class="play-button" onclick="toggleMusic('498BH0nt4VY', this)">▶</div>
+                    </div>
+                    <p class="item-name">あくび</p>
+                    <p class="item-sub">tele</p>
+                </div>
+
+                <div class="item-card">
+                    <div class="image-wrapper">
+                        <img src="images/jacket6.jpeg" alt="鯨の子">
+                        <div class="play-button" onclick="toggleMusic('il2UKpshkN4', this)">▶</div>
+                    </div>
+                    <p class="item-name">鯨の子</p>
+                    <p class="item-sub">tele</p>
+                </div>
+
+                <div class="item-card">
+                    <div class="image-wrapper">
+                        <img src="images/jacket7.jpg" alt="I'm sorry">
+                        <div class="play-button" onclick="toggleMusic('7VE3NoWhROc', this)">▶</div>
+                    </div>
+                    <p class="item-name">I'm sorry</p>
+                    <p class="item-sub">swell</p>
+                </div>
+
+                <div class="item-card">
+                    <div class="image-wrapper">
+                        <img src="images/jacket8.jpg" alt="ミルク">
+                        <div class="play-button" onclick="toggleMusic('I9UorohkqXc', this)">▶</div>
+                    </div>
+                    <p class="item-name">ミルク</p>
+                    <p class="item-sub">羊文学</p>
+                </div>
+
+                <div class="item-card">
+                    <div class="image-wrapper">
+                        <img src="images/jacket9.jpeg" alt="Just the Two of Us">
+                        <div class="play-button" onclick="toggleMusic('v8oqbWrP1QY', this)">▶</div>
+                    </div>
+                    <p class="item-name">Just the Two of Us</p>
+                    <p class="item-sub">Bill Withers</p>
+                </div>
+
+                <div class="item-card">
+                    <div class="image-wrapper">
+                        <img src="images/jacket10.jpg" alt="Recess">
+                        <div class="play-button" onclick="toggleMusic('WH8QnOdlrQg', this)">▶</div>
+                    </div>
+                    <p class="item-name">Recess</p>
+                    <p class="item-sub">Melanie Martinez</p>
+                </div>
+
+                <div class="item-card">
+                    <div class="image-wrapper">
+                        <img src="images/jacket11.jpg" alt="私小説">
+                        <div class="play-button" onclick="toggleMusic('n3q8o9-lPXw', this)">▶</div>
+                    </div>
+                    <p class="item-name">私小説</p>
+                    <p class="item-sub">tele</p>
+                </div>
+
+                <div class="scroll-spacer"></div>
+            </div>
+            <button class="nav-btn next" onclick="sideScroll('music-list', 1)">＞</button>
+        </div>
+    </section>
+
+    <div id="hidden-player" style="display:none;"></div>
+
+    <section class="horizontal-scroll-section" style="margin-top: -30px !important;">
+        <h2 class="section-title">おすすめの本</h2>
+        <div id="book-list-anchor" style="scroll-margin-top: 80px;"></div>
+        <div class="slider-wrapper">
+            <button class="nav-btn prev" onclick="sideScroll('book-list', -1)">＜</button>
+            <div class="scroll-container" id="book-list">
+                <div class="scroll-spacer"></div>
+                <a href="https://amzn.asia/d/0b63J3np" class="item-card link-card">
+                    <div class="image-wrapper">
+                        <img src="images/book1.jpg" alt="モモ">
+                    </div>
+                    <p class="item-name">モモ</p>
+                    <p class="item-sub">ミヒャエル・エンデ</p>
+                </a>
+                <a href="https://amzn.asia/d/0iblhtRR" class="item-card link-card">
+                    <div class="image-wrapper">
+                        <img src="images/book2.jpg" alt="星の王子さま">
+                    </div>
+                    <p class="item-name">星の王子さま</p>
+                    <p class="item-sub">ｱﾝﾄﾜｰﾇ・ﾄﾞ・ｻﾝ＝ﾃｸﾞｼﾞｭﾍﾟﾘ</p>
+                </a>
+                <a href="https://www.aozora.gr.jp/cards/000081/files/473_42318.html" class="item-card link-card">
+                    <div class="image-wrapper">
+                        <img src="images/book3.jpg" alt="よだかの星">
+                    </div>
+                    <p class="item-name">よだかの星</p>
+                    <p class="item-sub">宮沢賢治</p>
+                </a>
+                <a href="https://amzn.asia/d/07ZU6ozz" class="item-card link-card">
+                    <div class="image-wrapper">
+                        <img src="images/book4.jpg" alt="はてしない物語">
+                    </div>
+                    <p class="item-name">はてしない物語</p>
+                    <p class="item-sub">ミヒャエル・エンデ</p>
+                </a>
+                <a href="https://amzn.asia/d/06ggJYz8" class="item-card link-card">
+                    <div class="image-wrapper">
+                        <img src="images/book5.jpg" alt="老人と海">
+                    </div>
+                    <p class="item-name">老人と海</p>
+                    <p class="item-sub">ヘミングウェイ</p>
+                </a>
+                <a href="https://amzn.asia/d/08REgGCv" class="item-card link-card">
+                    <div class="image-wrapper">
+                        <img src="images/book6.jpg" alt="夜は短し歩けよ乙女">
+                    </div>
+                    <p class="item-name">夜は短し歩けよ乙女</p>
+                    <p class="item-sub">森見 登美彦</p>
+                </a>
+                <a href="https://amzn.asia/d/01gHLRIF" class="item-card link-card">
+                    <div class="image-wrapper">
+                        <img src="images/book7.jpg" alt="不思議の国のアリス">
+                    </div>
+                    <p class="item-name">不思議の国のアリス</p>
+                    <p class="item-sub">ルイス・キャロル</p>
+                </a>
+                <div class="scroll-spacer"></div> </div>
+                <button class="nav-btn next" onclick="sideScroll('book-list', 1)">＞</button>
+            </div>
+        </section>
+
+        <footer>
+            <p class="browser-notice">※スマホ版Google Chromeでの動作を推奨・保証しています。</p>
+            <span class="footer-note">© 2025 音の栞 All rights reserved.</span>
+        </footer>
+
+<script>
+function sideScroll(id, direction) {
+    const container = document.getElementById(id);
+    const scrollStep = 300;
+    const scrollPos = container.scrollLeft;
+    
+    if (direction === 1) {
+        if (scrollPos + container.clientWidth >= container.scrollWidth - 10) {
+            container.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+            container.scrollBy({ left: scrollStep, behavior: 'smooth' });
+        }
+    } else {
+        if (scrollPos <= 10) {
+            container.scrollTo({ left: container.scrollWidth, behavior: 'smooth' });
+        } else {
+            container.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+        }
+    }
+}
+
+let player;
+let currentBtn = null;
+
+const tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+const firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('hidden-player', {
+        height: '0',
+        width: '0',
+        videoId: '',
+        events: {
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.ENDED) {
+        if (currentBtn) currentBtn.innerText = "▶";
+    }
+}
+
+function changeVolume(value) {
+    if (player && player.setVolume) {
+        player.setVolume(value);
+    }
+}
+
+function toggleMusic(videoId, btn) {
+    if (currentBtn === btn) {
+        if (player.getPlayerState() === 1) {
+            player.pauseVideo();
+            btn.innerText = "▶";
+        } else {
+            player.playVideo();
+            btn.innerText = "■";
+        }
+        return;
+    }
+
+    if (currentBtn) {
+        currentBtn.innerText = "▶";
+    }
+    
+    player.loadVideoById(videoId);
+    
+    const vol = document.getElementById('volume-slider').value;
+    player.setVolume(vol);
+    
+    btn.innerText = "■";
+    currentBtn = btn;
+} 
+</script>
+</body>
+</html>
