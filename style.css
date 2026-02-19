@@ -24,7 +24,8 @@ body {
 .main-header {
     background-color: #000000;
     color: #32c32f;
-    padding: 10px 20px;
+    height: 60px;
+    padding: 0 20px; 
     display: flex;
     align-items: center;
     position: fixed;
@@ -305,3 +306,18 @@ footer {
 #book-list-anchor + .slider-wrapper .nav-btn {
     top: 40%;
 }
+
+.logo-img {
+    height: 80px;
+    width: auto;
+    display: block; 
+    transition: 0.3s;
+    position: relative;
+    top: 5px;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+}
+
+.logo-img:hover {
+    opacity: 0.8;
+}
+
