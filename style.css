@@ -293,3 +293,15 @@ footer {
   color: #ffffff;
 }
 
+.external-link-notice {
+    margin-left: 10%;
+    font-size: 0.65rem;
+    color: #999;
+    margin-top: 15px;
+    letter-spacing: 0.03em;
+    line-height: 1.5;
+}
+
+#book-list-anchor + .slider-wrapper .nav-btn {
+    top: 40%;
+}
